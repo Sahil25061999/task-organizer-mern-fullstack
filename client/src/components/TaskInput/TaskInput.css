@@ -1,0 +1,47 @@
+.task__inputs {
+  width: max(50vw, 28rem);
+  margin-block: 1.5rem;
+  position: relative;
+}
+
+.task__inputs::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 1rem;
+  left: 1rem;
+  z-index: -1;
+  background-color: var(--bg-color);
+}
+
+.task__inputs input {
+  width: 100%;
+  padding: 1rem;
+  padding-right: 6rem;
+  outline: none;
+}
+input:hover,
+input:focus {
+  border-width: 2px;
+}
+
+.task__add__btn {
+  /* border: 1px solid black; */
+  border: none;
+  border-right: 2px solid var(--font-color);
+  border-bottom: 2px solid var(--font-color);
+  height: 98%;
+  width: 4.5rem;
+  font-size: 2rem;
+  padding: 0.1rem;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: var(--bg-color);
+}
+
+.task__add__btn .task__add__btn:active {
+  transform: translateY(2px);
+  border-bottom: 0;
+}

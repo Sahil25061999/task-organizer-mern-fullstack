@@ -1,0 +1,12 @@
+:root {
+  --bg-color: hsl(177, 100%, 4%);
+  --font-color: hsl(0, 0%, 100%);
+}
+
+.app__body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

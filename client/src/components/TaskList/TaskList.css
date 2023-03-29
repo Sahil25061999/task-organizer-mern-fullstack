@@ -1,0 +1,31 @@
+.task__container {
+  margin-block: 3rem;
+  overflow: auto;
+  width: max(50%, 28rem);
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.empty__list {
+  padding-block: 5rem;
+  height: 100%;
+  color: rgb(49, 49, 49);
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+
+  /* background-color: red; */
+
+  /* margin-left: 1rem; */
+}
+
+::-webkit-scrollbar-thumb {
+  /* border-radius: 50rem; */
+  background-color: var(--bg-color);
+  border-left: 3px solid var(--font-color);
+}
