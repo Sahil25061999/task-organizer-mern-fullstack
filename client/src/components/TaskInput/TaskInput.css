@@ -41,7 +41,7 @@ input:focus {
   background: var(--bg-color);
 }
 
-.task__add__btn .task__add__btn:active {
+.task__add__btn:active {
   transform: translateY(2px);
   border-bottom: 0;
 }

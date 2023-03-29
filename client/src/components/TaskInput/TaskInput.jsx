@@ -9,7 +9,6 @@ export const TaskInput = () => {
   const [task, setTask] = useState('');
   const [error, setError] = useState(false);
   const { setTaskList } = useTaskList();
-  const URL = 'http://localhost:3000';
 
   const handleAddTask = async () => {
     try {

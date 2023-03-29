@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { getTaskList } from '../../api/taskApi';
 import { useTaskList } from '../../context/_index';
-
 import './TaskList.css';
 import { Task } from '../_index';
-
-const URL = 'http://localhost:3000';
 
 export const TaskList = () => {
   const { taskList, setTaskList } = useTaskList([]);

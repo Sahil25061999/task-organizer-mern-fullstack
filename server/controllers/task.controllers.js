@@ -3,9 +3,9 @@ const Task = require('../models/task.schema.js');
 const getAllTask = async (req, res) => {
   try {
     const taskList = await Task.find({}).sort({ createdAt: -1 });
-    res.json(taskList);
+    res.status(200).json(taskList);
   } catch (e) {
-    console.error(e);
+    res.status(404).json(e.message);
   }
 };
 
@@ -15,9 +15,9 @@ const addTask = async (req, res) => {
   try {
     const newTask = await Task.create({ task: task, createdAt: Date.now() });
     await newTask.save();
-    res.json(newTask);
+    res.status(201).json(newTask);
   } catch (e) {
-    res.status(404).json(e.message);
+    res.status(500).json(e.message);
   }
 };
 
@@ -26,7 +26,7 @@ const deleteTask = async (req, res) => {
   try {
     await Task.deleteOne({ _id: id });
     const taskList = await Task.find({}).sort({ createdAt: -1 });
-    res.json(taskList);
+    res.status(200).json(taskList);
   } catch (e) {
     res.status(404).json(e.message);
   }
@@ -38,9 +38,9 @@ const updateTask = async (req, res) => {
   try {
     await Task.findByIdAndUpdate(id, task);
     const taskList = await Task.find({}).sort({ createdAt: -1 });
-    res.json(taskList);
+    res.status(201).json(taskList);
   } catch (e) {
-    res.status(404);
+    res.status(404).json(e.message);
   }
 };
 
